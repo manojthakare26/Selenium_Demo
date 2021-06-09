@@ -158,21 +158,21 @@ public class SeleniumDemo {
 		Assert.assertEquals(expectedTitle, actualTitle);
 
 	}
-//
-//	@Test
-//	public void testPM() {
-//		
-//		driver.get(baseUrl);
-//		driver.findElement(By.name("q")).sendKeys("Prime minister of India");
-//		driver.findElement(By.name("btnK")).click();
-//		
-//		String actualPM = driver.findElement(By.className("FLP8od")).getText();
-//		String expectedPM = "Narendra Modi";
-//		
-//		System.out.println("Prime minister of India is "+actualPM);
-//		
-//		Assert.assertEquals(actualPM, expectedPM);
-//	}
+
+	@Test
+	public void testPM() {
+		
+		driver.get(baseUrl);
+		driver.findElement(By.name("q")).sendKeys("Prime minister of India");
+		driver.findElement(By.name("btnK")).click();
+		
+		String actualPM = driver.findElement(By.className("FLP8od")).getText();
+		String expectedPM = "Narendra Modi";
+		
+		System.out.println("Prime minister of India is "+actualPM);
+		
+		Assert.assertEquals(actualPM, expectedPM);
+	}
 
 	@AfterTest
 	public void closeBrowser() {
